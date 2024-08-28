@@ -20,11 +20,11 @@ export const Home = () => {
       <Subtitle>Click an animal image to speak</Subtitle>
       <ImagesContainer>
         <Image
-          src="/assets/lion.png"
+          src={`${process.env.PUBLIC_URL}/assets/lion.png`}
           onClick={() => setPhrase(lion.speak("I'm a lion"))}
         />
         <Image
-          src="/assets/tiger.png"
+          src={`${process.env.PUBLIC_URL}/assets/tiger.png`}
           onClick={() => setPhrase(tiger.speak("Lions suck"))}
         />
       </ImagesContainer>
