@@ -9,6 +9,8 @@ import {
   Title,
   Subtitle,
 } from "../styles/home.style";
+import lionImage from "../../../assets/lion.png";
+import tigerImage from "../../../assets/tiger.png";
 
 export const Home = () => {
   const [phrase, setPhrase] = useState("");
@@ -20,11 +22,11 @@ export const Home = () => {
       <Subtitle>Click an animal image to speak</Subtitle>
       <ImagesContainer>
         <Image
-          src={`${process.env.PUBLIC_URL}/assets/lion.png`}
+           src={lionImage}
           onClick={() => setPhrase(lion.speak("I'm a lion"))}
         />
         <Image
-          src={`${process.env.PUBLIC_URL}/assets/tiger.png`}
+           src={tigerImage}
           onClick={() => setPhrase(tiger.speak("Lions suck"))}
         />
       </ImagesContainer>
